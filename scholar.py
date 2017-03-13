@@ -1101,7 +1101,7 @@ class ScholarQuerier(object):
             ScholarUtils.log('debug', 'data:\n' + html.decode('utf-8')) # For Python 3
             ScholarUtils.log('debug', '<<<<' + '-'*68)
 
-            return html
+            return html.decode('utf-8')
         except Exception as err:
             ScholarUtils.log('info', err_msg + ': %s' % err)
             return None
